@@ -1,0 +1,21 @@
+{
+  "name": "pr-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --fix --ext ts src test"
+  },
+  "author": "bdistin",
+  "dependencies": {
+    "@klasa/core": "dirigeants/core#build",
+    "klasa": "dirigeants/klasa#build"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "eslint": "^7.1.0",
+    "eslint-config-klasa": "dirigeants/klasa-lint",
+    "typescript": "^3.9.3"
+  }
+}
