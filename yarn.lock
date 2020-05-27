@@ -53,7 +53,7 @@
 
 "@klasa/core@dirigeants/core#build":
   version "0.0.3"
-  resolved "https://codeload.github.com/dirigeants/core/tar.gz/d03537483c239bc8971a8464def902e7a500e960"
+  resolved "https://codeload.github.com/dirigeants/core/tar.gz/bfe40c805bb46de56108990e359f0dc5d5d2ddc0"
   dependencies:
     "@klasa/bitfield" "^0.0.2"
     "@klasa/cache" "^0.0.3"
@@ -754,7 +754,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
 
 klasa@dirigeants/klasa#build:
   version "0.6.0-dev"
-  resolved "https://codeload.github.com/dirigeants/klasa/tar.gz/53179c219c3c428bad26c5c8a932d7d34076869d"
+  resolved "https://codeload.github.com/dirigeants/klasa/tar.gz/ed36d6845e77bd1bc4777d94925a5dafebb8a8e5"
   dependencies:
     "@klasa/cache" "^0.0.3"
     "@klasa/console" "^0.0.2"
