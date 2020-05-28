@@ -1,4 +1,4 @@
-import { Command, CommandStore, KlasaMessage } from 'klasa';
+import { Command, CommandStore } from 'klasa';
 import type { Message } from '@klasa/core';
 
 export default class extends Command {
@@ -10,7 +10,7 @@ export default class extends Command {
 		});
 	}
 
-	public async run(msg: KlasaMessage, [arg1, arg2, arg3]: string[]): Promise<Message[]> {
+	public async run(msg: Message, [arg1, arg2, arg3]: string[]): Promise<Message[]> {
 		return msg.send(mb => mb.setContent(`arg1: ${arg1}, arg2: ${arg2}, arg3: ${arg3}`));
 	}
 

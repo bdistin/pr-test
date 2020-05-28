@@ -1,4 +1,4 @@
-import { Command, CommandStore, KlasaMessage } from 'klasa';
+import { Command, CommandStore } from 'klasa';
 import type { Message } from '@klasa/core';
 
 export default class extends Command {
@@ -10,7 +10,7 @@ export default class extends Command {
 		});
 	}
 
-	public async run(msg: KlasaMessage): Promise<Message[]> {
+	public async run(msg: Message): Promise<Message[]> {
 		return msg.send(mb => mb.setContent('wew, this channel is dirty dirty...'));
 	}
 

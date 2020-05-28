@@ -1,4 +1,4 @@
-import { Command, CommandStore, KlasaMessage, KlasaClient } from 'klasa';
+import { Command, CommandStore } from 'klasa';
 import type { Message } from '@klasa/core';
 
 export default class extends Command {
@@ -11,8 +11,8 @@ export default class extends Command {
 		});
 	}
 
-	public async run(msg: KlasaMessage, [when, text]: [Date, string]): Promise<Message[]> {
-		const reminder = await (this.client as KlasaClient).schedule.create('reminder', when, {
+	public async run(msg: Message, [when, text]: [Date, string]): Promise<Message[]> {
+		const reminder = await this.client.schedule.create('reminder', when, {
 			data: {
 				channel: msg.channel.id,
 				user: msg.author.id,

@@ -1,4 +1,4 @@
-import { Command, CommandStore, KlasaMessage, Usage } from 'klasa';
+import { Command, CommandStore, Usage } from 'klasa';
 import type { Message } from '@klasa/core';
 
 export default class extends Command {
@@ -10,7 +10,7 @@ export default class extends Command {
 		this.promptTemplate = this.definePrompt('<testUser:user> <testGuild:guild>', ' ');
 	}
 
-	public async run(msg: KlasaMessage): Promise<Message[]> {
+	public async run(msg: Message): Promise<Message[]> {
 		const [user, guild] = await this.promptTemplate.createPrompt(msg).run(mb => mb.setContent(`Give me a user and guild: \`${this.promptTemplate}\``));
 		return msg.send(mb => mb.setContent(`You chose ${user} and ${guild}`));
 	}
