@@ -48,13 +48,13 @@
 
 "@klasa/core@dirigeants/core#build":
   version "0.0.3"
-  resolved "https://codeload.github.com/dirigeants/core/tar.gz/280723c2f6c47a7bbab9987175f301f0329b2087"
+  resolved "https://codeload.github.com/dirigeants/core/tar.gz/608e144475599c9460c9c914147af10377a02c38"
   dependencies:
     "@klasa/bitfield" "^0.0.3"
     "@klasa/cache" "^0.0.3"
     "@klasa/dapi-types" "^0.2.0"
     "@klasa/event-iterator" "^0.0.10"
-    "@klasa/rest" "^0.4.1"
+    "@klasa/rest" "^0.4.2"
     "@klasa/snowflake" "^0.0.1"
     "@klasa/timer-manager" "^0.0.1"
     "@klasa/utils" "^0.0.8"
@@ -95,10 +95,10 @@
   resolved "https://registry.yarnpkg.com/@klasa/request-handler/-/request-handler-0.0.3.tgz#ed72de611ece3dd99725cb797fc13e07bb05e618"
   integrity sha512-Z1O+Aa2kW/I4Uos4EZalByveIuQKRfuRx+JCsgsogDBd95N5Ub47AH+LEd5i+uzjnJ6iDHfodpVlaHojJ4Q+ZQ==
 
-"@klasa/rest@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@klasa/rest/-/rest-0.4.1.tgz#b1d6cbaa9a87bc1aa526a64c31bd5a2dc5a1a911"
-  integrity sha512-wGVVSlWMGo32GKZaU95v9KL9V3ED9/t0lPl8+bE/KBlotbaETkZk402Fh7Bj3UMD2NZGu4hObqIir2Q5vwZM7Q==
+"@klasa/rest@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@klasa/rest/-/rest-0.4.2.tgz#947b4c070b01c6d33378cb1c276b0bfa456a61b3"
+  integrity sha512-AROo78txB1pre19lvU7VBJy5U9aUBujOeQPFbyz1b4mw8Oxv8BPUUzxUNa5ZTpvUlq9G+EgDkwKlnTBVeuB1uA==
   dependencies:
     "@klasa/async-queue" "^0.0.1"
     "@klasa/cache" "^0.0.3"
@@ -739,7 +739,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
 
 klasa@dirigeants/klasa#build:
   version "0.6.0-dev"
-  resolved "https://codeload.github.com/dirigeants/klasa/tar.gz/ed1126806e967140b0145885737083c4d7c2714a"
+  resolved "https://codeload.github.com/dirigeants/klasa/tar.gz/dba55a6c45317dee96792e616cfbf749a07ac225"
   dependencies:
     "@klasa/cache" "^0.0.3"
     "@klasa/console" "^0.0.2"
