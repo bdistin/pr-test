@@ -5,13 +5,12 @@ export default class extends Command {
 
 	public constructor(store: CommandStore, directory: string, files: readonly string[]) {
 		super(store, directory, files, {
-			nsfw: true,
-			description: ''
+			cooldown: 30000
 		});
 	}
 
 	public async run(msg: Message): Promise<Message[]> {
-		return msg.reply(mb => mb.setContent('wew, this channel is dirty dirty...'));
+		return msg.reply(mb => mb.setContent(`yay, not ratelimited`));
 	}
 
-};
+}

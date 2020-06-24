@@ -26,7 +26,7 @@ export default class extends Command {
 	public async run(msg: Message): Promise<Message[]> {
 		const existing = this.handlers.get(msg.channel.id);
 		if (existing) existing.stop();
-		const displayMessage = await msg.send(mb => mb.setEmbed(em => em.setTitle('loading')));
+		const displayMessage = await msg.reply(mb => mb.setEmbed(em => em.setTitle('loading')));
 		const handler = await this.album.run(displayMessage[0], {
 			idle: 30000,
 			filter: ([_reaction, user]) => user === msg.author,

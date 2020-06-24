@@ -19,7 +19,7 @@ export default class extends Command {
 				text: text
 			}
 		});
-		return msg.send(mb => mb.setContent(`Ok, I created you a reminder with the id: \`${reminder!.id}\``));
+		return msg.reply(mb => mb.setContent(`Ok, I created you a reminder with the id: \`${reminder!.id}\``));
 	}
 
 };

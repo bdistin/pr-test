@@ -1,10 +1,15 @@
 import { Command, RichMenu, CommandStore } from 'klasa';
-import { Embed, Message } from '@klasa/core';
+import { Embed, Message, PermissionsFlags } from '@klasa/core';
+import { ChannelType } from '@klasa/dapi-types';
 
 export default class extends Command {
 
 	public constructor(store: CommandStore, directory: string, files: readonly string[]) {
-		super(store, directory, files, { description: 'tests RichMenu.' });
+		super(store, directory, files, {
+			description: 'tests RichMenu.',
+			requiredPermissions: [PermissionsFlags.EmbedLinks, PermissionsFlags.AddReactions, PermissionsFlags.ManageMessages, PermissionsFlags.ReadMessageHistory],
+			runIn: [ChannelType.GuildText]
+		});
 	}
 
 	async run(msg: Message): Promise<Message[]> {
@@ -14,7 +19,7 @@ export default class extends Command {
 			album.addChoice(command.name, typeof command.description === 'function' ? command.description(msg.language) : command.description || 'empty');
 		}
 
-		const response = await msg.send(mb => mb.setEmbed(em => em.setTitle('loading')));
+		const response = await msg.reply(mb => mb.setEmbed(em => em.setTitle('loading')));
 		const handler = await album.run(response[0], { filter: ([_reaction, user]) => user === msg.author });
 	
 		handler.selection.then(choice => {

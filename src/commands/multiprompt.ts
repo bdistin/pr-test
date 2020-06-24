@@ -11,7 +11,7 @@ export default class extends Command {
 	}
 
 	public async run(msg: Message, [arg1, arg2, arg3]: string[]): Promise<Message[]> {
-		return msg.send(mb => mb.setContent(`arg1: ${arg1}, arg2: ${arg2}, arg3: ${arg3}`));
+		return msg.reply(mb => mb.setContent(`arg1: ${arg1}, arg2: ${arg2}, arg3: ${arg3}`));
 	}
 
 }

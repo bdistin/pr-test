@@ -12,7 +12,7 @@ export default class extends Command {
 
 	public async run(msg: Message): Promise<Message[]> {
 		const [user, guild] = await this.promptTemplate.createPrompt(msg).run(mb => mb.setContent(`Give me a user and guild: \`${this.promptTemplate}\``));
-		return msg.send(mb => mb.setContent(`You chose ${user} and ${guild}`));
+		return msg.reply(mb => mb.setContent(`You chose ${user} and ${guild}`));
 	}
 
 };
